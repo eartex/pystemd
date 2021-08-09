@@ -49,7 +49,7 @@ with open(version_file) as version:
         for expr in parsed_file.body
         if isinstance(expr, _ast.Assign)
         and isinstance(expr.targets[0], _ast.Name)
-        and isinstance(expr.value, _ast.Str)
+        and isinstance(expr.value, ast.Str)
         and expr.targets[0].id == "__version__"
     ][0]
 
